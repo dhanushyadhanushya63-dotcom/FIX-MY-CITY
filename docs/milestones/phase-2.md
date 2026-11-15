@@ -1,6 +1,6 @@
 # FixMyStreet Project Milestone
 
-## Phase 1: Architecture, MySQL Schema & Spring Boot Foundations
+## Phase 2: Citizen Portal, Complaint Filing & Geo-tracking
 
 FixMyStreet civic grievance reporting platform.
 Completed milestones and automated test verifications.

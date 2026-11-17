@@ -93,3 +93,5 @@ export default function Home({ go }) {
     </>
   );
 }
+
+// Hero section, CTA buttons and stats added

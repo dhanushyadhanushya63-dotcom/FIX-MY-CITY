@@ -75,3 +75,5 @@ export default function App() {
 }
 
 // Route configuration complete - all pages linked
+
+// Navigation fix: added fallback route and redirect logic

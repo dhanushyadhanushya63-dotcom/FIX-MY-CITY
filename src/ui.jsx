@@ -71,3 +71,5 @@ export function Thanks({ text, onClose, title, label }) {
 }
 
 // Modal dialog, Toast notifications and Card components
+
+// Toast system: success/error/warning/info with 3s auto-dismiss

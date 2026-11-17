@@ -95,3 +95,5 @@ export default function Home({ go }) {
 }
 
 // Hero section, CTA buttons and stats added
+
+// Home banner: gradient background with animated heading

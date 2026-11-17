@@ -71,3 +71,5 @@ export function Thanks({ text, onClose, title, label }) {
 }
 
 // Modal dialog, Toast notifications and Card components
+
+// ARIA: aria-label and role attributes on all buttons and inputs

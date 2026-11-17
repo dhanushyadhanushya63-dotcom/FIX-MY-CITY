@@ -301,3 +301,5 @@ body{background:linear-gradient(180deg,#ffffff 0%,#f4fbfa 48%,#edf7f5 100%);colo
 /* Map component, pin marker and popup CSS styles */
 
 /* Footer, Feedback form and modal overlay CSS */
+
+/* Dark mode: data-theme=dark CSS variable overrides for all colors */

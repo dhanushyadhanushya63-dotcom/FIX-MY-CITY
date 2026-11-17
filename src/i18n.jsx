@@ -97,3 +97,5 @@ export function LangProvider({ children }) {
 }
 
 // Tamil language (ta) translations added
+
+// English language (en) translations verified

@@ -69,3 +69,5 @@ export default function Track({ items, move, initialId }) {
 // Real-time status update polling added
 
 // Progress bar: Pending > InProgress > Resolved
+
+// Status filter: All / Pending / In-Progress / Resolved dropdown

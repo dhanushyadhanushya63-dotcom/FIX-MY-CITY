@@ -116,3 +116,5 @@ export default function Map({ items = [], pin, onPick, onSelect, focus, selected
 // Marker clustering and popup tooltips enabled
 
 // Geolocation accuracy improved with watchPosition
+
+// Location search: geocoding API integration for place lookup

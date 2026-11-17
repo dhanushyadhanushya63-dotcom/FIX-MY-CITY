@@ -112,3 +112,5 @@ export default function Map({ items = [], pin, onPick, onSelect, focus, selected
 
   return <div ref={el} className="map" style={{ height, minHeight: 280, width: '100%' }} role="region" aria-label={label} />;
 }
+
+// Marker clustering and popup tooltips enabled

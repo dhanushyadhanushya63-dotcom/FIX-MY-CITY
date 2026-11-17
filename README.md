@@ -37,3 +37,9 @@ Address lookup uses the public Nominatim/OpenStreetMap service. Use it respectfu
 ## Backend integration
 
 The main demo data and state transitions are in `src/App.jsx` and `src/data.js`. Replace the local state handlers with authenticated Spring Boot API calls when the backend is ready. Validate complaint ownership and staff roles on the server; frontend role selection is only a demo convenience.
+
+
+## Contributors
+- **Dhanushya** - Core setup, routing and pages
+- **Dhivya** - Maps, i18n and tracking
+- **Devasri** - UI components, feedback and footer

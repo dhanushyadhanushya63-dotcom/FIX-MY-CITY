@@ -71,3 +71,5 @@ export function Thanks({ text, onClose, title, label }) {
 }
 
 // Modal dialog, Toast notifications and Card components
+
+// Global spinner: full-screen overlay with CSS animated ring

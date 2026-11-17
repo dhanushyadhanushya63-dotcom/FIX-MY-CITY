@@ -149,3 +149,5 @@ export default function Register({ items, add, go }) {
     </div>
   );
 }
+
+// Form validation rules: email, phone, password strength

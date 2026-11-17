@@ -55,3 +55,5 @@ export default function Feedback({ send }) {
     </section>
   );
 }
+
+// Star rating and comment validation added

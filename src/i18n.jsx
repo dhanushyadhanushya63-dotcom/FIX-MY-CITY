@@ -99,3 +99,5 @@ export function LangProvider({ children }) {
 // Tamil language (ta) translations added
 
 // English language (en) translations verified
+
+// Language persistence: localStorage.setItem('lang', selectedLang)

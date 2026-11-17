@@ -56,3 +56,5 @@ export default function Authority({ user, items, move }) {
     </>
   );
 }
+
+// Report management dashboard for authorities

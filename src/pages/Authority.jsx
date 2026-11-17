@@ -60,3 +60,5 @@ export default function Authority({ user, items, move }) {
 // Report management dashboard for authorities
 
 // Filter by district and search by issue ID
+
+// Pagination: 10 reports per page, prev/next buttons

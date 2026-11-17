@@ -1,6 +1,6 @@
 # FixMyStreet Project Milestone
 
-## Phase 3: Authority Workbench, Work Order Stages & Field Notes
+## Phase 4: Admin Monitoring Desk, Duplicate Detection & SLAs
 
 FixMyStreet civic grievance reporting platform.
 Completed milestones and automated test verifications.

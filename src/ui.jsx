@@ -71,3 +71,5 @@ export function Thanks({ text, onClose, title, label }) {
 }
 
 // Modal dialog, Toast notifications and Card components
+
+// Card hover: transform scale(1.02) and box-shadow on :hover

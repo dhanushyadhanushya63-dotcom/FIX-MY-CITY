@@ -47,3 +47,5 @@ export const Staff = ({ onEnter }) => (
     {ROLES.map((r) => <button key={r.role} className="role" onClick={() => onEnter(r)}><b>{r.title}</b><span>{r.text}</span></button>)}
   </section>
 );
+
+// About us, Contact and FAQ accordion sections

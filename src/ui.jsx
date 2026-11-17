@@ -69,3 +69,5 @@ export function Thanks({ text, onClose, title, label }) {
     </div>
   );
 }
+
+// Modal dialog, Toast notifications and Card components

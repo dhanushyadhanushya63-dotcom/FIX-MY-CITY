@@ -75,3 +75,5 @@ export default function App() {
 }
 
 // Route configuration complete - all pages linked
+
+// 404 page route: custom styled not-found component

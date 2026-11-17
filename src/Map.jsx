@@ -116,3 +116,5 @@ export default function Map({ items = [], pin, onPick, onSelect, focus, selected
 // Marker clustering and popup tooltips enabled
 
 // Geolocation accuracy improved with watchPosition
+
+// Custom zoom controls: styled +/- buttons matching design system

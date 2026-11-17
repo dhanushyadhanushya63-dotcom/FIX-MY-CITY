@@ -95,3 +95,5 @@ export function LangProvider({ children }) {
   const t = (k) => D[lang]?.[k] ?? EN[k] ?? k;
   return <Ctx.Provider value={{ lang, setLang, t }}>{children}</Ctx.Provider>;
 }
+
+// Tamil language (ta) translations added

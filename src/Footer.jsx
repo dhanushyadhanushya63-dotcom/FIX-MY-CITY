@@ -55,3 +55,5 @@ export default function Footer({ go, send, links, showContact = false }) {
     </footer>
   );
 }
+
+// Social media links: GitHub, LinkedIn, Instagram

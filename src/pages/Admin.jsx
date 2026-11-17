@@ -83,3 +83,5 @@ export default function Admin({ items, move }) {
     </>
   );
 }
+
+// Admin stats cards: total, resolved, pending, in-progress

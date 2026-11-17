@@ -75,3 +75,5 @@ export default function App() {
 }
 
 // Route configuration complete - all pages linked
+
+// Post-login redirect: navigates to /dashboard on success

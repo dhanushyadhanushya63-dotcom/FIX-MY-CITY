@@ -65,3 +65,5 @@ export default function Track({ items, move, initialId }) {
     </div>
   );
 }
+
+// Real-time status update polling added

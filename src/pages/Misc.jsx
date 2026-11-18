@@ -49,3 +49,5 @@ export const Staff = ({ onEnter }) => (
 );
 
 // About us, Contact and FAQ accordion sections
+
+// Contact form: name, email, subject, message with FormData submit

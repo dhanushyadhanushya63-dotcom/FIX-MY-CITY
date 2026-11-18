@@ -151,3 +151,5 @@ export default function Register({ items, add, go }) {
 }
 
 // Form validation rules: email, phone, password strength
+
+// UX improvement: inline validation and password strength meter

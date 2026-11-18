@@ -116,3 +116,5 @@ export default function Map({ items = [], pin, onPick, onSelect, focus, selected
 // Marker clustering and popup tooltips enabled
 
 // Geolocation accuracy improved with watchPosition
+
+// Heatmap layer: Leaflet.heat plugin for issue density visualization

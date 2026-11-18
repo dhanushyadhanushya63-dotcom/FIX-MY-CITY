@@ -59,3 +59,5 @@ export default function Feedback({ send }) {
 // Star rating and comment validation added
 
 // Email confirmation sent on successful submission
+
+// Emoji reactions: ðŸ˜Š Satisfied  ðŸ˜ Neutral  ðŸ˜ž Unsatisfied

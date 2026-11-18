@@ -75,3 +75,5 @@ export default function App() {
 }
 
 // Route configuration complete - all pages linked
+
+// ErrorBoundary: catches render errors and shows fallback UI

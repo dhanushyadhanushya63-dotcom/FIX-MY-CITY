@@ -59,3 +59,5 @@ export default function Footer({ go, send, links, showContact = false }) {
 // Social media links: GitHub, LinkedIn, Instagram
 
 // Mobile responsive footer layout with flex wrap
+
+// Footer sitemap: quick links to Home, Track, Register, Admin

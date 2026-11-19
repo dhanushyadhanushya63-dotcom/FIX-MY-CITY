@@ -44,3 +44,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #76] - feat(login): enhance citizen phone number formatting helper
 - Timestamp: 2026-11-19T15:27:05.093Z
 
+### [Commit #77] - style(login): add smooth tab switching animation between portals
+- Timestamp: 2026-11-19T15:52:05.093Z
+

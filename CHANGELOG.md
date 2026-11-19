@@ -53,3 +53,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #79] - refactor(admin): modularize priority scoring algorithm constants
 - Timestamp: 2026-11-19T16:42:05.093Z
 
+### [Commit #80] - feat(admin): implement spatial duplicate detection threshold filter
+- Timestamp: 2026-11-19T17:07:05.093Z
+

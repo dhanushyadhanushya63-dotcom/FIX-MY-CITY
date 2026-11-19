@@ -86,3 +86,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #90] - feat(backend): create JPA entity mappings for status audit log
 - Timestamp: 2026-11-19T21:17:05.093Z
 
+### [Commit #91] - feat(backend): create ComplaintNote entity and repository layer
+- Timestamp: 2026-11-19T21:42:05.093Z
+

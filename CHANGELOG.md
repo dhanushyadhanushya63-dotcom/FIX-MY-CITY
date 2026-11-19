@@ -101,3 +101,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #95] - feat(backend): implement ComplaintService stage transition logic
 - Timestamp: 2026-11-19T23:22:05.093Z
 
+### [Commit #96] - feat(backend): add validation constraints to ComplaintRequest DTO
+- Timestamp: 2026-11-19T23:47:05.093Z
+

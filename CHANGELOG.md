@@ -17,3 +17,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #67] - docs: create CHANGELOG.md tracking FixMyStreet civic releases
 - Timestamp: 2026-11-19T11:42:05.093Z
 
+### [Commit #68] - feat(ui): add responsive layout grid for mobile devices
+- Timestamp: 2026-11-19T12:07:05.093Z
+

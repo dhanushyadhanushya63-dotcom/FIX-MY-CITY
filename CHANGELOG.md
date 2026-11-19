@@ -77,3 +77,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #87] - fix(citizen): handle empty state when citizen has no active tickets
 - Timestamp: 2026-11-19T20:02:05.093Z
 
+### [Commit #88] - docs(api): document REST endpoints and payload schemas in README
+- Timestamp: 2026-11-19T20:27:05.093Z
+

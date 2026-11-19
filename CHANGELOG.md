@@ -56,3 +56,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #80] - feat(admin): implement spatial duplicate detection threshold filter
 - Timestamp: 2026-11-19T17:07:05.093Z
 
+### [Commit #81] - fix(admin): prevent duplicate team assignment modal dispatch
+- Timestamp: 2026-11-19T17:32:05.093Z
+

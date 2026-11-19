@@ -71,3 +71,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #85] - refactor(data): structure mock complaint dataset with localized addresses
 - Timestamp: 2026-11-19T19:12:05.093Z
 
+### [Commit #86] - feat(citizen): add star rating selector on resolved complaint receipt
+- Timestamp: 2026-11-19T19:37:05.093Z
+

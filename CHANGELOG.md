@@ -41,3 +41,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #75] - refactor(forms): extract reusable input field validation logic
 - Timestamp: 2026-11-19T15:02:05.093Z
 
+### [Commit #76] - feat(login): enhance citizen phone number formatting helper
+- Timestamp: 2026-11-19T15:27:05.093Z
+

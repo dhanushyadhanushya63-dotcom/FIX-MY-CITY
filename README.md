@@ -37,8 +37,8 @@ FixMyStreet is a full-featured, web-based civic issue reporting and resolution p
 ---
 
 ## 🛠️ Technologies Used
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+), React.js, Vite, Leaflet, OpenStreetMap
-- **Backend**: Java 17+, Spring Boot (Spring Web, Spring Data JPA, Hibernate, REST API)
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+), React.js, Vite
+- **Backend**: Java 17+, Spring Boot (Spring Web, Spring Data JPA, REST API)
 - **Database**: MySQL 8.0+
 - **Tools**: Postman, Git, GitHub, Maven
 

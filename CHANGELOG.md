@@ -20,3 +20,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #68] - feat(ui): add responsive layout grid for mobile devices
 - Timestamp: 2026-11-19T12:07:05.093Z
 
+### [Commit #69] - fix(nav): correct active route indicator in header navigation
+- Timestamp: 2026-11-19T12:32:05.093Z
+

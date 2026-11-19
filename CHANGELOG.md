@@ -32,3 +32,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #72] - perf(assets): compress civic hero graphics and vector icons
 - Timestamp: 2026-11-19T13:47:05.093Z
 
+### [Commit #73] - feat(complaints): add category badge indicators on issue cards
+- Timestamp: 2026-11-19T14:12:05.093Z
+

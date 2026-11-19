@@ -92,3 +92,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #92] - feat(backend): create Feedback entity with automated timestamping
 - Timestamp: 2026-11-19T22:07:05.093Z
 
+### [Commit #93] - feat(backend): create User entity supporting citizen and admin roles
+- Timestamp: 2026-11-19T22:32:05.093Z
+

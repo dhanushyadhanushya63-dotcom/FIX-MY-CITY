@@ -35,3 +35,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #73] - feat(complaints): add category badge indicators on issue cards
 - Timestamp: 2026-11-19T14:12:05.093Z
 
+### [Commit #74] - fix(map): adjust initial zoom level and center coordinates for Chennai
+- Timestamp: 2026-11-19T14:37:05.093Z
+

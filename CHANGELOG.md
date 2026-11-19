@@ -26,3 +26,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #70] - style: refine color palette tokens for dark mode theme
 - Timestamp: 2026-11-19T12:57:05.093Z
 
+### [Commit #71] - feat(home): add quick stats banner for resolved citizen issues
+- Timestamp: 2026-11-19T13:22:05.093Z
+

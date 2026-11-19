@@ -65,3 +65,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #83] - feat(authority): implement mandatory photo upload verification rule
 - Timestamp: 2026-11-19T18:22:05.093Z
 
+### [Commit #84] - style(authority): polish before and after image comparison slider
+- Timestamp: 2026-11-19T18:47:05.093Z
+

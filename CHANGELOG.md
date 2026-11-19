@@ -83,3 +83,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #89] - feat(backend): add CORS configuration for local React development
 - Timestamp: 2026-11-19T20:52:05.093Z
 
+### [Commit #90] - feat(backend): create JPA entity mappings for status audit log
+- Timestamp: 2026-11-19T21:17:05.093Z
+

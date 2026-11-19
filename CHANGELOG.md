@@ -98,3 +98,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #94] - feat(backend): add UserRepository queries for email and contact lookup
 - Timestamp: 2026-11-19T22:57:05.093Z
 
+### [Commit #95] - feat(backend): implement ComplaintService stage transition logic
+- Timestamp: 2026-11-19T23:22:05.093Z
+

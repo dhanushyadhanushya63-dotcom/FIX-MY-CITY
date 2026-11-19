@@ -50,3 +50,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #78] - feat(admin): add SLA countdown timer formatting for overdue tickets
 - Timestamp: 2026-11-19T16:17:05.093Z
 
+### [Commit #79] - refactor(admin): modularize priority scoring algorithm constants
+- Timestamp: 2026-11-19T16:42:05.093Z
+

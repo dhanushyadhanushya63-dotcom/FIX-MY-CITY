@@ -68,3 +68,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #84] - style(authority): polish before and after image comparison slider
 - Timestamp: 2026-11-19T18:47:05.093Z
 
+### [Commit #85] - refactor(data): structure mock complaint dataset with localized addresses
+- Timestamp: 2026-11-19T19:12:05.093Z
+

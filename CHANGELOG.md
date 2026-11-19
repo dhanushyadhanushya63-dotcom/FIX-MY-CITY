@@ -8,3 +8,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #64] - feat(config): add .env.example with API endpoints and map token variables
 - Timestamp: 2026-11-19T10:27:05.093Z
 
+### [Commit #65] - feat(ide): add VS Code workspace settings for ESLint and Prettier
+- Timestamp: 2026-11-19T10:52:05.093Z
+

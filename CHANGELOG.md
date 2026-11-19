@@ -23,3 +23,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #69] - fix(nav): correct active route indicator in header navigation
 - Timestamp: 2026-11-19T12:32:05.093Z
 
+### [Commit #70] - style: refine color palette tokens for dark mode theme
+- Timestamp: 2026-11-19T12:57:05.093Z
+

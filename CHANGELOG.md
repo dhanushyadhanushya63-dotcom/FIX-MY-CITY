@@ -47,3 +47,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #77] - style(login): add smooth tab switching animation between portals
 - Timestamp: 2026-11-19T15:52:05.093Z
 
+### [Commit #78] - feat(admin): add SLA countdown timer formatting for overdue tickets
+- Timestamp: 2026-11-19T16:17:05.093Z
+

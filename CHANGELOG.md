@@ -74,3 +74,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #86] - feat(citizen): add star rating selector on resolved complaint receipt
 - Timestamp: 2026-11-19T19:37:05.093Z
 
+### [Commit #87] - fix(citizen): handle empty state when citizen has no active tickets
+- Timestamp: 2026-11-19T20:02:05.093Z
+

@@ -80,3 +80,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #88] - docs(api): document REST endpoints and payload schemas in README
 - Timestamp: 2026-11-19T20:27:05.093Z
 
+### [Commit #89] - feat(backend): add CORS configuration for local React development
+- Timestamp: 2026-11-19T20:52:05.093Z
+

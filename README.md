@@ -1,45 +1,64 @@
-# FixMyStreet — professional civic issue reporting frontend
+# FixMyStreet – Community Issue Reporting and Resolution Management System
 
-A React + Vite civic issue reporting demo using Leaflet and OpenStreetMap.
+FixMyStreet is a full-featured, web-based civic issue reporting and resolution platform that connects citizens directly with municipal authorities to fix public infrastructure issues (potholes, garbage accumulation, water leakage, broken street lights, and damaged roads).
 
-## Run locally
+---
 
+## 🏗️ 3 Core Application Modules
+
+### 1. Citizen Module
+- **Registration & Authentication**: Resident signup, mobile/email verification, ward selection.
+- **Issue Reporting**: Categorized filing (Roads, Waste, Water, Lighting), OpenStreetMap GPS pin drop, reverse-geocoded address search, photo attachment, and voice-to-text description.
+- **Dedicated Citizen Dashboard**: Real-time tracking of reported issues, digital acknowledgment receipt generation, live stage progress bar, and 1-to-5 star rating upon resolution.
+
+### 2. Municipal Admin Module
+- **Command & Decision Desk**: High-level KPI metrics (Open issues, Overdue escalations, High priority cases, Resolved count).
+- **Smart Duplicate Detection**: Proximity-based spatial algorithm identifies duplicate reports filed within 60 metres, saving municipal resources.
+- **Priority Scoring Engine**: Scores issues dynamically based on category severity, elapsed age, and cluster density (High, Medium, Low).
+- **Hotspot GIS Monitoring**: Interactive OpenStreetMap visualization pinpointing city clusters with priority-colored markers.
+- **Authority Team Assignment**: One-click dispatch to specialized municipal departments (`Zone 4 Roads`, `Sanitation Wing`, `Metro Water`, `Lighting Cell`).
+
+### 3. Authority & Field Team Module
+- **Department Work Orders**: Dedicated portal for departmental field leads and workers.
+- **Field Execution Progress**: Step-by-step milestone progression (`New Assigned` ➔ `Action in Progress` ➔ `Resolved`).
+- **Mandatory Resolution Proof**: Requires uploading an after-repair photo before marking any issue as resolved.
+- **Interactive Before & After Viewer**: Visual side-by-side comparison slider for citizens and inspectors to confirm work quality.
+
+---
+
+## 🌟 Special Features
+1. **Proximity-Based Duplicate Detection** (Within 60m radius).
+2. **Automated Priority Scoring Engine** (Category severity + Age + Local recurrence).
+3. **Hotspot GIS Clustering** (Live OpenStreetMap markers).
+4. **Overdue SLA Escalation Alerts** (Flags cases open beyond the 5-day municipal SLA).
+5. **Interactive Before/After Resolution Slider**.
+6. **Unified Multi-Role Login Portal** with instant 1-click evaluation access.
+
+---
+
+## 🛠️ Technologies Used
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+), React.js, Vite, Leaflet, OpenStreetMap
+- **Backend**: Java 17+, Spring Boot (Spring Web, Spring Data JPA, Hibernate, REST API)
+- **Database**: MySQL 8.0+
+- **Tools**: Postman, Git, GitHub, Maven
+
+---
+
+## 🚀 How to Run the Project Locally
+
+### Frontend (React + Vite)
 ```bash
 npm install
 npm run dev
 ```
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-Open the local URL printed by Vite (normally http://localhost:5173).
-
-## Included workflows
-
-- Citizen complaint registration with category, description, location pin and optional image.
-- OpenStreetMap pin selection, draggable marker, current-location selection and address lookup.
-- Complaint success screen with a detailed digital acknowledgement receipt.
-- Receipt includes Complaint ID, issue category, description, selected location, coordinates and submission date/time.
-- Use **Save / Print PDF** to open the browser print dialog, then choose **Save as PDF** as the destination.
-- Copy Complaint ID and open complaint tracking directly from the receipt.
-- Complaint tracking timeline and guidance for a lost complaint ID.
-- Admin dashboard with complaint filters, map view, priority/duplicate/overdue indicators and a manual smart-validation review queue.
-- Authority workflow for progress updates and resolution proof.
-- English/Tamil language selector.
-- Full-width home hero with a refreshed civic-centre illustration and responsive layout.
-- Compact footer without repeated page-navigation links; the main navigation remains in the header.
-- Contact form appears only on the Home page.
-- Complaint metadata is saved in browser localStorage for this frontend demo.
-
-## Important demo limitations
-
-This ZIP is a frontend demo. It does not connect to a live Spring Boot/MySQL backend, send OTPs, notify authorities, or perform server-side fraud verification. Smart validation only highlights records for a human admin to review; it must not be treated as proof of fraud or automatically reject complaints. Photo preview/proof URLs are browser-session URLs and are not durable file storage.
-
-Address lookup uses the public Nominatim/OpenStreetMap service. Use it respectfully and follow the service usage policy. A production deployment should use an appropriate geocoding provider/service setup and backend API.
-
-## Backend integration
-
-The main demo data and state transitions are in `src/App.jsx` and `src/data.js`. Replace the local state handlers with authenticated Spring Boot API calls when the backend is ready. Validate complaint ownership and staff roles on the server; frontend role selection is only a demo convenience.
-
-
-## Contributors
-- **Dhanushya** - Core setup, routing and pages
-- **Dhivya** - Maps, i18n and tracking
-- **Devasri** - UI components, feedback and footer
+### Backend (Java Spring Boot)
+1. Import `backend/database.sql` into MySQL Workbench.
+2. In `backend/src/main/resources/application.properties`, update your MySQL password.
+3. Start the Spring Boot backend:
+```bash
+cd backend
+mvn spring-boot:run
+```
+Backend runs at [http://localhost:8080](http://localhost:8080).

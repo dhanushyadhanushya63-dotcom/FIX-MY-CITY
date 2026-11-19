@@ -1,7 +1,9 @@
-import { FaBullhorn, FaRegClock, FaShieldAlt, FaLeaf, FaArrowRight } from 'react-icons/fa';
+import { FaBullhorn, FaRegClock, FaShieldAlt, FaLeaf, FaArrowRight, FaCheckCircle, FaBolt, FaStar, FaTools, FaUser, FaUserShield, FaHardHat } from 'react-icons/fa';
 import { useT } from '../i18n.jsx';
 import { useReveal } from '../ui.jsx';
 import { FLOW } from '../flow.js';
+import BeforeAfterSlider from '../components/BeforeAfterSlider';
+import heroBanner from '../assets/home-hero.png';
 
 const Skyline = () => (
   <svg className="city-illustration" viewBox="0 0 680 430" role="img" aria-label="Bright illustration of a modern municipal civic centre and a clean green neighbourhood">
@@ -72,28 +74,171 @@ export default function Home({ go }) {
   const { t } = useT();
   return (
     <>
-      <section className="hero">
-        <div>
-          <h1>{t('h_a')} <span>{t('h_b')}</span></h1>
-          <p>{t('h_sub')}</p>
-          <div className="row">
-            <button className="solid big" onClick={() => go('register')}>{t('h_reg')} <FaArrowRight /></button>
-            <button className="ghost big" onClick={() => go('track')}>{t('h_track')}</button>
+      {/* MUNICIPALITY CIVIC HERO BANNER */}
+      <section className="home-hero-banner-section" aria-label="Our Street, Our Responsibilities">
+        <div className="hero-banner-container">
+          <img
+            src={heroBanner}
+            alt="FixMyStreet - Our Street, Our Responsibilities"
+            className="hero-banner-image"
+          />
+          {/* Interactive Clickable Hotspots mapped directly to the image */}
+          <div className="hero-interactive-grid">
+            <button
+              type="button"
+              className="hero-hotspot explore-hotspot"
+              onClick={() => go('citizen')}
+              title="Explore Citizen Portal & Services"
+            >
+              <span className="sr">Explore Services</span>
+            </button>
+
+            <div className="hero-cards-hotspots">
+              <button
+                type="button"
+                className="card-hotspot"
+                onClick={() => go('register')}
+                title="Report Waste Management Issue"
+              >
+                <span className="sr">Waste Management</span>
+              </button>
+
+              <button
+                type="button"
+                className="card-hotspot"
+                onClick={() => go('register')}
+                title="Report Water Services Issue"
+              >
+                <span className="sr">Water Services</span>
+              </button>
+
+              <button
+                type="button"
+                className="card-hotspot"
+                onClick={() => go('register')}
+                title="Report Road Maintenance Issue"
+              >
+                <span className="sr">Road Maintenance</span>
+              </button>
+
+              <button
+                type="button"
+                className="card-hotspot"
+                onClick={() => go('register')}
+                title="Register New Complaint"
+              >
+                <span className="sr">Report Issue</span>
+              </button>
+
+              <button
+                type="button"
+                className="card-hotspot"
+                onClick={() => go('track')}
+                title="Track Complaint Status Live"
+              >
+                <span className="sr">Track Status</span>
+              </button>
+
+              <button
+                type="button"
+                className="card-hotspot"
+                onClick={() => go('admin')}
+                title="View Municipal Notices & Hotspot Map"
+              >
+                <span className="sr">Latest Notices</span>
+              </button>
+            </div>
           </div>
         </div>
-        <Skyline />
       </section>
+
+      {/* 3 CORE APPLICATION MODULES SHOWCASE */}
+      <section className="modules-portal-bar" aria-label="FixMyStreet 3 Main Modules">
+        <div className="module-banner-card citizen-banner" onClick={() => go('citizen')}>
+          <div className="mod-head">
+            <span className="mod-icon citizen-icon"><FaUser /></span>
+            <div>
+              <b>1. Citizen Module</b>
+              <small className="mute d-block">Report, Track & Verify</small>
+            </div>
+          </div>
+          <p className="small">Report civic issues with photos and GPS pin, track real-time resolution timeline and download receipts.</p>
+          <span className="launch-link">Open Citizen Dashboard →</span>
+        </div>
+
+        <div className="module-banner-card admin-banner" onClick={() => go('admin')}>
+          <div className="mod-head">
+            <span className="mod-icon admin-icon"><FaUserShield /></span>
+            <div>
+              <b>2. Admin Desk</b>
+              <small className="mute d-block">Review, Duplicates & Assign</small>
+            </div>
+          </div>
+          <p className="small">Review incoming complaints, identify duplicate reports within 60m, monitor GIS hotspots and dispatch authority teams.</p>
+          <span className="launch-link">Open Admin Dashboard →</span>
+        </div>
+
+        <div className="module-banner-card auth-banner" onClick={() => go('authority')}>
+          <div className="mod-head">
+            <span className="mod-icon auth-icon"><FaHardHat /></span>
+            <div>
+              <b>3. Authority Teams</b>
+              <small className="mute d-block">Execute Work & Proof</small>
+            </div>
+          </div>
+          <p className="small">Manage departmental work orders, update field progress notes and upload mandatory after-work repair proof photos.</p>
+          <span className="launch-link">Open Authority Dashboard →</span>
+        </div>
+      </section>
+
+      {/* LIVE CIVIC PULSE STATS TICKER */}
+      <section className="live-pulse-bar" aria-label="Live city civic stats">
+        <div className="pulse-item">
+          <div className="pulse-num"><span className="live-dot" /> 1,428+</div>
+          <small><FaCheckCircle /> Issues Resolved This Month</small>
+        </div>
+        <div className="pulse-item">
+          <div className="pulse-num">3.2 Days</div>
+          <small><FaBolt /> Average Turnaround Time</small>
+        </div>
+        <div className="pulse-item">
+          <div className="pulse-num">95.4%</div>
+          <small><FaStar /> Citizen Satisfaction Rate</small>
+        </div>
+        <div className="pulse-item">
+          <div className="pulse-num">4,850+</div>
+          <small><FaTools /> Verified Civic Actions</small>
+        </div>
+      </section>
+
       <section className="tiles" aria-label="FixMyStreet">
         {FEATURES.map(([Icon, k]) => (
           <div key={k} className="tile"><span className="ico"><Icon /></span><b>{t(k + 't')}</b><small>{t(k + 'd')}</small></div>
         ))}
       </section>
+
+      {/* UNIQUE INTERACTIVE BEFORE & AFTER CIVIC PROOF SHOWCASE */}
+      <section className="impact-showcase" aria-label="Civic impact before and after proof">
+        <div className="impact-head">
+          <div>
+            <span className="eyebrow">VERIFIED CIVIC IMPACT</span>
+            <h2>Real Results: Before &amp; After Fixes</h2>
+            <p className="mute">Drag the slider horizontally to compare the reported street issue with the completed municipal resolution.</p>
+          </div>
+          <div className="impact-tag">
+            <span>Zone 4 - Anna Salai Pothole Repair</span>
+          </div>
+        </div>
+
+        <BeforeAfterSlider
+          beforeLabel="REPORTED: DEEP POTHOLE"
+          afterLabel="RESOLVED: TAR LEVELLING COMPLETE"
+          category="pothole"
+        />
+      </section>
+
       <Workflow />
       <section className="home-contact-intro"><span className="eyebrow">WE ARE LISTENING</span><h2>Let’s make our neighbourhood better.</h2><p>Have a question about reporting or tracking a civic issue? Send our team a message below.</p></section>
     </>
   );
 }
-
-// Hero section, CTA buttons and stats added
-
-// Home banner: gradient background with animated heading

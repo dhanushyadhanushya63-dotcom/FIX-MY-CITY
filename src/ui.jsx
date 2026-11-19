@@ -38,6 +38,39 @@ export const Timeline = ({ c }) => (
   </ol>
 );
 
+// Skeleton Shimmer Loading Placeholder Components
+export const SkeletonCard = () => (
+  <div className="skeleton-card" aria-hidden="true">
+    <div className="skeleton-bar title" />
+    <div className="skeleton-bar medium" />
+    <div className="skeleton-bar short" />
+  </div>
+);
+
+export const SkeletonScreen = () => (
+  <div className="skeleton-wrap" aria-busy="true" aria-label="Loading data from database">
+    <div className="skeleton-hero">
+      <div className="skeleton-bar h1" />
+      <div className="skeleton-bar subtitle" />
+      <div className="skeleton-row-btn">
+        <div className="skeleton-btn" />
+        <div className="skeleton-btn small" />
+      </div>
+    </div>
+    <div className="skeleton-stats">
+      <div className="skeleton-stat-tile" />
+      <div className="skeleton-stat-tile" />
+      <div className="skeleton-stat-tile" />
+      <div className="skeleton-stat-tile" />
+    </div>
+    <div className="skeleton-grid">
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+    </div>
+  </div>
+);
+
 // Adds the class "in" to the element the first time it scrolls into view (used for entrance animation).
 export function useReveal() {
   const ref = useRef(null);
@@ -69,7 +102,3 @@ export function Thanks({ text, onClose, title, label }) {
     </div>
   );
 }
-
-// Modal dialog, Toast notifications and Card components
-
-// Toast system: success/error/warning/info with 3s auto-dismiss

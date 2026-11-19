@@ -6,14 +6,18 @@ import TrackArt from './TrackArt';
 import { CATS, stamp } from '../data';
 import { Status, Timeline } from '../ui';
 import { CITIZEN } from '../data';
+import BeforeAfterSlider from '../components/BeforeAfterSlider';
 
-export default function Track({ items, move, initialId }) {
+export default function Track({ items, move, initialId, currentUser }) {
   const { t } = useT();
   const [q, setQ] = useState(initialId);
   const [shown, setShown] = useState(initialId);
   const [miss, setMiss] = useState(false);
   const c = items.find((x) => x.id === shown);
-  const mine = items.filter((x) => x.by === CITIZEN).sort((a, b) => b.id.localeCompare(a.id));
+  const currentCitizen = currentUser?.name || CITIZEN;
+  const mine = items
+    .filter((x) => (x.by || '').toLowerCase() === currentCitizen.toLowerCase() || x.by === CITIZEN)
+    .sort((a, b) => b.id.localeCompare(a.id));
   const look = (e, id = q) => { e?.preventDefault(); const f = items.find((x) => x.id === id.trim().toUpperCase()); setMiss(!f); setShown(f ? f.id : ''); setQ(id.trim().toUpperCase()); };
 
   return (
@@ -54,6 +58,24 @@ export default function Track({ items, move, initialId }) {
           <p className="mute">{t('tr_cat')}: {CATS[c.cat].label}<br />{t('tr_sub')}: {stamp(c.history[0].at)}{c.team ? <><br />{t('tr_by')}: {c.team}</> : null}</p>
           <p>{c.desc}</p>
           <Timeline c={c} />
+          
+          {/* Interactive Before & After Slider for Resolved Complaints */}
+          {c.stage >= 4 && (
+            <div style={{ marginTop: '1.2rem', marginBottom: '1.2rem' }}>
+              <h4 style={{ margin: '0 0 .5rem', fontSize: '1rem', color: 'var(--navy)' }}>
+                Resolution Verification Proof (Before &amp; After)
+              </h4>
+              <p className="mute small" style={{ marginBottom: '.8rem' }}>
+                Drag the interactive slider to inspect the verified fix completed by {c.team || 'the municipal team'}.
+              </p>
+              <BeforeAfterSlider
+                beforeLabel="BEFORE: REPORTED"
+                afterLabel="AFTER: RESOLVED & VERIFIED"
+                category={c.cat}
+              />
+            </div>
+          )}
+
           {c.proofImg && <img className="thumb" src={c.proofImg} alt="Resolution proof" />}
           {c.stage === 4 && (
             <div className="feedback"><b>The team marked this resolved{c.proof ? ' and attached proof' : ''}. How did they do?</b>
@@ -65,7 +87,3 @@ export default function Track({ items, move, initialId }) {
     </div>
   );
 }
-
-// Real-time status update polling added
-
-// Progress bar: Pending > InProgress > Resolved

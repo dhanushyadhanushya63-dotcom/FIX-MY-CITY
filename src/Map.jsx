@@ -5,8 +5,27 @@ import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
 import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 import 'leaflet/dist/leaflet.css';
 
-// Explicit icon paths are needed for Leaflet markers in Vite builds.
-L.Icon.Default.mergeOptions({ iconUrl: markerIcon, iconRetinaUrl: markerIcon2x, shadowUrl: markerShadow });
+// Fix Leaflet's default icon URL resolution in Vite
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconUrl: markerIcon,
+  iconRetinaUrl: markerIcon2x,
+  shadowUrl: markerShadow,
+});
+
+// Guaranteed crisp SVG Pin Icon for draggable marker (never fails to render)
+const customPinIcon = L.divIcon({
+  className: 'custom-map-pin',
+  html: `<div style="display:flex;flex-direction:column;align-items:center;transform:translate(-50%,-100%);filter:drop-shadow(0 4px 8px rgba(0,0,0,0.4));cursor:grab;">
+    <svg width="34" height="44" viewBox="0 0 34 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17 0C7.611 0 0 7.611 0 17C0 28.5 14.5 42.5 16.2 43.8C16.7 44.1 17.3 44.1 17.8 43.8C19.5 42.5 34 28.5 34 17C34 7.611 26.389 0 17 0Z" fill="#e11d48"/>
+      <circle cx="17" cy="16" r="7" fill="white"/>
+      <circle cx="17" cy="16" r="4" fill="#e11d48"/>
+    </svg>
+  </div>`,
+  iconSize: [0, 0],
+  iconAnchor: [0, 0],
+});
 
 const TONES = { red: '#e11d48', amber: '#d97706', blue: '#087f8c', green: '#16a34a' };
 const TILES = {
@@ -62,14 +81,13 @@ export default function Map({ items = [], pin, onPick, onSelect, focus, selected
     tileLayer.current?.remove();
     const [url, attribution] = TILES[satellite ? 'satellite' : 'map'];
     tileLayer.current = L.tileLayer(url, {
-      maxZoom: satellite ? 19 : 19,
+      maxZoom: 19,
       attribution,
       crossOrigin: true,
-      updateWhenIdle: true,
-      keepBuffer: 2,
+      updateWhenIdle: false,
+      keepBuffer: 3,
     }).addTo(map.current);
     tileLayer.current.on('tileerror', () => {
-      // Keep the map controls usable even if a public tile server is temporarily unavailable.
       el.current?.classList.add('map-tiles-warning');
     });
     tileLayer.current.on('tileload', () => el.current?.classList.remove('map-tiles-warning'));
@@ -92,8 +110,12 @@ export default function Map({ items = [], pin, onPick, onSelect, focus, selected
       }
     });
     if (pin && Number.isFinite(Number(pin.lat)) && Number.isFinite(Number(pin.lng))) {
-      L.marker([Number(pin.lat), Number(pin.lng)], { draggable: !!onPick, autoPan: true })
-        .bindTooltip('Your selected location')
+      L.marker([Number(pin.lat), Number(pin.lng)], {
+        icon: customPinIcon,
+        draggable: !!onPick,
+        autoPan: true,
+      })
+        .bindTooltip('Your selected location (drag to adjust)', { permanent: false, direction: 'top', offset: [0, -42] })
         .on('dragend', (event) => {
           const point = event.target.getLatLng();
           pick.current?.({ lat: point.lat, lng: point.lng });
@@ -103,16 +125,18 @@ export default function Map({ items = [], pin, onPick, onSelect, focus, selected
   }, [items, pin?.lat, pin?.lng, selected, !!onPick]);
 
   useEffect(() => {
-    if (pin && map.current) map.current.flyTo([Number(pin.lat), Number(pin.lng)], 16, { duration: 0.5 });
+    if (pin && map.current) {
+      map.current.flyTo([Number(pin.lat), Number(pin.lng)], 16, { duration: 0.6 });
+      setTimeout(() => map.current?.invalidateSize(), 300);
+    }
   }, [pin?.lat, pin?.lng]);
 
   useEffect(() => {
-    if (focus && map.current) map.current.flyTo([Number(focus.lat), Number(focus.lng)], 15, { duration: 0.5 });
+    if (focus && map.current) {
+      map.current.flyTo([Number(focus.lat), Number(focus.lng)], 15, { duration: 0.5 });
+      setTimeout(() => map.current?.invalidateSize(), 300);
+    }
   }, [focus?.lat, focus?.lng]);
 
   return <div ref={el} className="map" style={{ height, minHeight: 280, width: '100%' }} role="region" aria-label={label} />;
 }
-
-// Marker clustering and popup tooltips enabled
-
-// Geolocation accuracy improved with watchPosition

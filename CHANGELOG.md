@@ -95,3 +95,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #93] - feat(backend): create User entity supporting citizen and admin roles
 - Timestamp: 2026-11-19T22:32:05.093Z
 
+### [Commit #94] - feat(backend): add UserRepository queries for email and contact lookup
+- Timestamp: 2026-11-19T22:57:05.093Z
+

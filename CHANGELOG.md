@@ -62,3 +62,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #82] - feat(authority): add work order progress bar visualizer
 - Timestamp: 2026-11-19T17:57:05.093Z
 
+### [Commit #83] - feat(authority): implement mandatory photo upload verification rule
+- Timestamp: 2026-11-19T18:22:05.093Z
+

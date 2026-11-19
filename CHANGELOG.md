@@ -14,3 +14,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #66] - feat(ide): add VS Code launch configuration for full stack debugging
 - Timestamp: 2026-11-19T11:17:05.093Z
 
+### [Commit #67] - docs: create CHANGELOG.md tracking FixMyStreet civic releases
+- Timestamp: 2026-11-19T11:42:05.093Z
+

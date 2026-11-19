@@ -38,3 +38,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #74] - fix(map): adjust initial zoom level and center coordinates for Chennai
 - Timestamp: 2026-11-19T14:37:05.093Z
 
+### [Commit #75] - refactor(forms): extract reusable input field validation logic
+- Timestamp: 2026-11-19T15:02:05.093Z
+

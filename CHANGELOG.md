@@ -59,3 +59,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #81] - fix(admin): prevent duplicate team assignment modal dispatch
 - Timestamp: 2026-11-19T17:32:05.093Z
 
+### [Commit #82] - feat(authority): add work order progress bar visualizer
+- Timestamp: 2026-11-19T17:57:05.093Z
+

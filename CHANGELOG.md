@@ -11,3 +11,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #65] - feat(ide): add VS Code workspace settings for ESLint and Prettier
 - Timestamp: 2026-11-19T10:52:05.093Z
 
+### [Commit #66] - feat(ide): add VS Code launch configuration for full stack debugging
+- Timestamp: 2026-11-19T11:17:05.093Z
+

@@ -113,3 +113,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #99] - feat(backend): implement FeedbackController submission handler
 - Timestamp: 2026-11-20T01:02:05.093Z
 
+### [Commit #100] - style(backend): format application.properties with section comments
+- Timestamp: 2026-11-20T01:27:05.093Z
+

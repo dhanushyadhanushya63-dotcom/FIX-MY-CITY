@@ -116,3 +116,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #100] - style(backend): format application.properties with section comments
 - Timestamp: 2026-11-20T01:27:05.093Z
 
+### [Commit #101] - docs(db): add MySQL Workbench execution guide to database.sql
+- Timestamp: 2026-11-20T01:52:05.093Z
+

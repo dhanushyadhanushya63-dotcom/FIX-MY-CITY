@@ -128,3 +128,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #104] - perf: memoize complaint filter calculations in Admin dashboard
 - Timestamp: 2026-11-20T03:07:05.093Z
 
+### [Commit #105] - docs: add comprehensive CONTRIBUTING guidelines and code style rules
+- Timestamp: 2026-11-20T03:32:05.093Z
+

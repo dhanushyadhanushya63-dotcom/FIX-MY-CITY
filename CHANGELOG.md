@@ -122,3 +122,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #102] - feat(db): add indexing on complaints category and area columns
 - Timestamp: 2026-11-20T02:17:05.093Z
 
+### [Commit #103] - style: adjust typography scale and card shadow elevation
+- Timestamp: 2026-11-20T02:42:05.093Z
+

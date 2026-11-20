@@ -125,3 +125,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #103] - style: adjust typography scale and card shadow elevation
 - Timestamp: 2026-11-20T02:42:05.093Z
 
+### [Commit #104] - perf: memoize complaint filter calculations in Admin dashboard
+- Timestamp: 2026-11-20T03:07:05.093Z
+

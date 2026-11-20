@@ -104,3 +104,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #96] - feat(backend): add validation constraints to ComplaintRequest DTO
 - Timestamp: 2026-11-19T23:47:05.093Z
 
+### [Commit #97] - feat(backend): add NoteRequest and StageUpdateRequest DTO classes
+- Timestamp: 2026-11-20T00:12:05.093Z
+

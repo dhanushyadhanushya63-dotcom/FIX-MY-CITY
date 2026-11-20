@@ -107,3 +107,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #97] - feat(backend): add NoteRequest and StageUpdateRequest DTO classes
 - Timestamp: 2026-11-20T00:12:05.093Z
 
+### [Commit #98] - feat(backend): implement UserController login verification endpoint
+- Timestamp: 2026-11-20T00:37:05.093Z
+

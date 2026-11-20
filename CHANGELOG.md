@@ -110,3 +110,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #98] - feat(backend): implement UserController login verification endpoint
 - Timestamp: 2026-11-20T00:37:05.093Z
 
+### [Commit #99] - feat(backend): implement FeedbackController submission handler
+- Timestamp: 2026-11-20T01:02:05.093Z
+

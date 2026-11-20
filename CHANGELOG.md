@@ -119,3 +119,6 @@ All notable changes to the FixMyStreet platform are documented here.
 ### [Commit #101] - docs(db): add MySQL Workbench execution guide to database.sql
 - Timestamp: 2026-11-20T01:52:05.093Z
 
+### [Commit #102] - feat(db): add indexing on complaints category and area columns
+- Timestamp: 2026-11-20T02:17:05.093Z
+
